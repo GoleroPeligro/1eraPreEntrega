@@ -55,11 +55,11 @@ while (nombreProd != "ESC") {
   
             for (const producto of carrito) {
                 iProd++;
-                compras += `${iProd} - ${producto.nombre}: US$${producto.precio}\n`;
+                compras += `${iProd} - ${producto.nombre}: $${producto.precio}\n`;
                 total += producto.precio;
             }
 
-            let carro = prompt(`CARRITO:\n${compras}\nTOTAL: US$${total}\nSi desea borrar un producto escriba su numero o escriba COMPRAR para finalizar la compra`);
+            let carro = prompt(`CARRITO:\n${compras}\nTOTAL: $${total}\nSi desea borrar un producto escriba su numero o escriba COMPRAR para finalizar la compra`);
 
             if (carro.toUpperCase() == "COMPRAR") { 
                 alert("Gracias por su compra");
