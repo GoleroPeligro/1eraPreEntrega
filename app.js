@@ -52,7 +52,8 @@ while (nombreProd != "ESC") {
 //--------Se accede al CARRITO que muestra los productos ingresados, sus precios y el total--------
         while (nombreProd.toUpperCase() == "CARRITO") {
             let iProd = 0;
-  
+            total = 0;
+            compras = "";
             for (const producto of carrito) {
                 iProd++;
                 compras += `${iProd} - ${producto.nombre}: $${producto.precio}\n`;
@@ -68,8 +69,6 @@ while (nombreProd != "ESC") {
             }
             if (Number(carro) > 0 && Number(carro) <= carrito.length) {
                 eliminarCarrito(Number(carro));
-                total = 0;
-                compras = "";
 
             } if (Number(carro) > (carrito.length+1)) {
                 alert(`Debe ingresar un numero de porducto valido, entre el 1 y el ${carrito.length}`);
